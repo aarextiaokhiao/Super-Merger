@@ -1,0 +1,27 @@
+<head>
+	<title>Super-Merger</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A truly inspirational game where you have to merge to progress.">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" media="all">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/remove-focus-outline@1.2.1/outline.min.js"></script>
+</head>
+<body onload="MAIN.load()">
+	<div id="container">
+		<div id="loading" v-if="false">
+			<span id="loading_center">Loading...</span>
+		</div>
+		<div style="display: none" v-bind:style='{ display: "" }'>
+			<div v-for="i in 1e3">
+				<merger v-bind:test=i></merger>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/saving.js"></script>
+	<script src="js/merger.js"></script>
+</body>

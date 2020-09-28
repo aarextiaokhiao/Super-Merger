@@ -1,0 +1,45 @@
+body {
+	background: #0f0f0f
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Inconsolata", monospace;
+	color: #efefef
+}
+
+#loading {
+	height: 100%;
+	width: 100%;
+}
+
+#loading_center {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 10vh;
+	text-align: center
+}
+
+.merger {
+	position: relative;
+	height: 96px;
+	width: 96px;
+	margin: 6px;
+	border: 6px solid #bfbfbf;
+	border-radius: 12px;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.merger_center {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 30px;
+	text-align: center
+}
