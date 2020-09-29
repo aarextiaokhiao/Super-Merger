@@ -10,18 +10,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/remove-focus-outline@1.2.1/outline.min.js"></script>
 </head>
 <body onload="MAIN.load()">
-	<div id="container">
+	<div id="app">
 		<div id="loading" v-if="false">
 			<span id="loading_center">Loading...</span>
 		</div>
-		<div style="display: none" v-bind:style='{ display: "" }'>
-			<div v-for="i in 1e3">
-				<merger v-bind:test=i></merger>
-			</div>
+		<div id="container" style="display: none" v-bind:style='{ display: "" }'>
+			<span class="big glow" id="scrap">{{display.s}}</span> scrap | <span class="big glow" id="energy">{{display.e}}</span> energy
+			<br>
+			<merger v-for="i in display.m.length" v-bind:id=i></merger>
 		</div>
 	</div>
-	<script src="js/main.js"></script>
 	<script src="js/vue.js"></script>
+	<script src="js/logarithmica_numerus_lite.js"></script>
+	<script src="js/shorten.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/tmp.js"></script>
+	<script src="js/display.js"></script>
 	<script src="js/saving.js"></script>
+
 	<script src="js/merger.js"></script>
 </body>

@@ -7,14 +7,21 @@ let VUE = {
 		}
 
 		let app = new Vue({
-			el: "#container",
-			data: {}
+			el: "#app",
+			data: {
+				display
+			}
 		})
 	},
 	components: {
 		merger: {
-			props: ["test"],
-			template: "<div class='merger'><div class='merger_center'>{{test}}</div></div>"
+			props: ["id"],
+			template: `
+				<div class='merger'>
+					<div class='merger_center'>{{display.m[id - 1].t}}</div>
+					<div class='merger_production'>{{display.m[id - 1].d}}</div>
+				</div>
+			`
 		}
 	}
 }
